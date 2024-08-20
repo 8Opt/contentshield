@@ -6,11 +6,11 @@ from transformers import (
 )
 import torch
 
-
-from contentshield.processor.pre_processing import clean
+from contentshield.detector.base import BaseToxicDetector
+from contentshield.tools.text_processing import clean
 from contentshield.model_catalog import BINARY_CLASSIFIER, MULTI_CLASS_CLASSIFIER
 
-class PretrainedClassifer(object): 
+class TextToxicDetector(BaseToxicDetector): 
 
     def __init__(self, 
                  model_id:str, 
@@ -32,10 +32,10 @@ class PretrainedClassifer(object):
     def call_pretrained(self, model_id) -> Tuple[AutoTokenizer, AutoModelForSequenceClassification]: 
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         model = AutoModelForSequenceClassification.from_pretrained(model_id).eval()
-
         return (tokenizer, model)  
-    
-    def classify(self, text, label:Union[Dict, None]=None) -> Dict: 
+
+
+    def detect(self, text, label:Union[Dict, None]=None) -> Dict: 
         result = {}
 
         text = clean(text=text)

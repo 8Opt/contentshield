@@ -23,8 +23,7 @@ def clean_dashes(text: str) -> str:
     """
 
     return re.sub(r"[-\u2013]", " ", text).strip()
-
-
+ 
 def clean(
     text: str,
     extra_whitespace: bool = False,
@@ -34,7 +33,6 @@ def clean(
 ) -> str:
     """
         Cleans text.
-
     """
 
     cleaned_text = text.lower() if lowercase else text
@@ -43,3 +41,4 @@ def clean(
     cleaned_text = clean_emoji(cleaned_text) if emoji else cleaned_text
 
     return cleaned_text.strip()
+
