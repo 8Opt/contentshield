@@ -1,0 +1,1 @@
++ [PySceneDetect](https://www.scenedetect.com/docs/latest/api/detectors.html)
