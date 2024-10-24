@@ -34,7 +34,7 @@ class GPT:
         payload = self._prepare_payload(prompt, top_k, max_tokens)
         return self._make_api_request(payload)
 
-    def generate_text(self, prompt, top_k=10, max_tokens=10):
+    def invoke(self, prompt, top_k=10, max_tokens=10):
         """Makes a GPT-3 API call and returns only the generated text."""
         response = self.__call__(prompt, top_k, max_tokens)
         try:

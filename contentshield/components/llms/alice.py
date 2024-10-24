@@ -10,7 +10,7 @@ class ALICE(object):
     def __call__(self, prompt):
         return self.generate(prompt)
 
-    def generate(self, prompt):
+    def invoke(self, prompt):
         if self.mode == "neutral":
             flag = 0
         else:

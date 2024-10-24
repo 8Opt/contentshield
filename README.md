@@ -16,21 +16,26 @@
 - [🧩 Features](#-features)
 - [🚀 Usage](#-usage)
 - [👾 Gallery](#-gallery)
-- [📐 App Structure](#-app-structure)
+- [📐 Project Structure](#-project-structure)
 - [🧑‍💻 Contact](#-contact)
 </details>
 
 ## 📍 Overview
-ContentShield 🛡️ is an innovative project that empowers social media platforms with a suite of lightweight AI engines. Our mission is to detect and mitigate harmful content, creating a safer online environment. With a wide range of AI tools, we offer a comprehensive solution to combat various forms of harmful content, ensuring a positive and secure user experience.
 
+ContentShield 🛡️ is an innovative project that empowers social media platforms with a suite of lightweight AI engines. Our mission is to detect and mitigate harmful content, creating a safer online environment. With a wide range of AI tools, we offer a comprehensive solution to combat various forms of harmful content, ensuring a positive and secure user experience. 
+
+Let's make a world a better place! 
 
 ## 🧩 Features
 
+- [ ] Text-based harm detection (sexism, racism, body shaming, etc.).
+- [ ] Harmful object detection in images.
+- [ ] Harmful content mitigation (text and image).
 
 
 ## 🚀 Usage
 
-1. Setup environments 
+1. Setup environment
 
 
 2. Running the project
@@ -40,11 +45,11 @@ ContentShield 🛡️ is an innovative project that empowers social media platfo
 ## 👾 Gallery
 
 
-## 📐 App Structure
+## 📐 Project Structure
 
 
 ## 🧑‍💻 Contact
 
 + **Gmail**: minh.leduc.0210@gmail.com
-+ **LinkedIn**: https://www.linkedin.com/in/minh-le-duc-a62863172/
-+ **Medium**: https://medium.com/@octoopt_8888
++ **LinkedIn**: https://www.linkedin.com/in/minhle007
++ **Medium**: https://medium.com/@minhle_0210

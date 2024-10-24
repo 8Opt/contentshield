@@ -23,7 +23,7 @@ class HateSpeechClassifier:
         outputs = self.model(input_ids)
         return outputs
 
-    def classify_text(self, text):
+    def invoke(self, text):
         """Classifies text using tokenizer and model."""
         input_ids = self.tokenizer(text, return_tensors="pt")["input_ids"]
         logits = self(input_ids).logits
