@@ -6,7 +6,7 @@ from src.schemas.healthcheck import HealtcheckInfo
 
 class BaseSerivce(ABC):
     @abstractmethod
-    async def inference(self, sentence: str | list[str]) -> str:
+    async def inference(self, sentences: str | list[str]) -> str:
         raise NotImplementedError
 
     async def info(self) -> HealtcheckInfo:
