@@ -1,34 +1,19 @@
-[tool.poetry]
+[project]
 name = "contentshield"
 version = "0.1.0"
-description = ""
-authors = ["MinLee0210"]
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "colorlog>=6.9.0",
+    "fastapi[standard]>=0.115.8",
+    "pydantic-settings>=2.8.0",
+    "transformers>=4.49.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-torch = {version = "^2.5.0+cu118", source = "pytorch-gpu"}
-torchvision = {version = "^0.20.0+cu118", source = "pytorch-gpu"}
-torchaudio = {version = "^2.5.0+cu118", source = "pytorch-gpu"}
-transformers = "^4.45.2"
-datasets = "^3.0.2"
-black = "^24.10.0"
-mypy = "^1.13.0"
-isort = "^5.13.2"
-googletrans = "4.0.0rc1"
-nltk = "^3.9.1"
-pytest = "^8.3.3"
-
-
-[[tool.poetry.source]]
-name = "pytorch-gpu"
-url = "https://download.pytorch.org/whl/cu118"
-priority = "explicit"
-
-
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.5"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[[tool.uv.index]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
