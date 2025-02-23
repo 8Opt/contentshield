@@ -5,9 +5,8 @@ from fastapi.responses import FileResponse
 
 from src.api import api_routers
 from src.core.config import settings
-from src.core.setup_lifespan import get_project_metadata, lifespan
+from src.core.setup_lifespan import lifespan
 
-metadata = get_project_metadata()
 
 description_md = Path(__file__).parent / "README.md"
 
@@ -15,11 +14,11 @@ app = FastAPI(
     docs_url="/",
     lifespan=lifespan,
     openapi_url="/openapi.json",
-    title=settings.APP if settings.APP else metadata["title"],
-    version=metadata["version"],
+    title=settings.APP,
+    version="0.1.0",
     description=description_md.read_text(encoding="utf-8")
     if description_md.exists()
-    else metadata["description"],
+    else "",
 )
 
 app.include_router(api_routers)
