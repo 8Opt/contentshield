@@ -21,12 +21,18 @@ async def toxicity_detect(req: ToxicRequest):
 
 @router.get(
     '/info', 
-    description="Healthcheck", 
+    description="Service Health Status", 
     status_code=200,
-    response_description="An IP address of the running service"
+    response_description="Service health status and basic information"
 )
-async def get_info(): 
+async def get_health_status(): 
     resp = await toxic_detect_service.info()
     if not resp.get("success"):
         raise HTTPException(status_code=422, detail=resp.get("detail"))
-    return resp.get("data")
+    
+    # Only return minimal necessary info
+    safe_data = {
+        "status": "healthy" if resp.get("data") else "unhealthy",
+        "version": resp.get("data", {}).get("version", "unknown")
+    }
+    return safe_data
